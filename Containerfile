@@ -5,4 +5,4 @@ RUN apk add --update \
     logrotate
 
 ENTRYPOINT [ "/usr/sbin/logrotate" ]
-CMD [ "-s" , "/config/logrotate.state", "/config/logrotate.config" ]
+CMD [ "-f", "-s" , "/config/logrotate.state", "/config/logrotate.config" ]
